@@ -3,5 +3,5 @@ Olá esse projeto tem como objetivo facilitar o acesso aos preços das ações n
 
 # Comandos #
 
-Preço + (Sigla da Ação) -> Retorna o último preço da ação
+Preço + (Sigla da Ação) -> Retorna o último preço da ação \n
 Info + (Sigla da ação) -> Retorna informações da ação

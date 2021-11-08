@@ -132,5 +132,4 @@ dmypy.json
 .vscode/
 env-dev/
 
-constants.py
 __pycache__

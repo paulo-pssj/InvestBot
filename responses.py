@@ -9,6 +9,9 @@ def sample_responses(input_text):
     elif "preço" in user_message:
         return Acoes.ultima_cotacao(user_message.split(' ')[1])
     
+    elif "preco" in user_message:
+        return Acoes.ultima_cotacao(user_message.split(' ')[1])
+    
     elif "info" in user_message:
         return Acoes.info_acao(user_message.split(' ')[1])
     

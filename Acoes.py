@@ -3,7 +3,7 @@ import investpy
 def ultima_cotacao(acao):
     try:
         dados = investpy.stocks.get_stock_recent_data(acao, 'brazil', order='descending')
-        return f'Último preço da {acao} foi R$ {dados.iloc[0]["Close"]}.'
+        return f'Último preço da {acao.upper()} foi R$ {dados.iloc[0]["Close"]}.'
     except RuntimeError:
         return f'Tente novamente com uma sigla válida.'
 

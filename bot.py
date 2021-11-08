@@ -2,7 +2,7 @@ from telegram.ext import *
 import constants, responses
 import os
 
-PORT = int(os.environ.get('PORT', 80))
+PORT = int(os.environ.get('PORT', '8443'))
 
 def start_command(update, context):
     update.message.reply_text(f"Olá {update.message.from_user['first_name']} Seja bem vindo ao InvestBrBot, digite /help para ver os comandos disponíveis")
@@ -29,10 +29,11 @@ def main():
     dp.add_error_handler(error)
 
     updater.start_webhook(listen="0.0.0.0",
-                          port=int(PORT),
-                          url_path=constants.API_KEY)
+                      port=PORT,
+                      url_path=constants.API_KEY,
+                      webhook_url= constants.HEROKU_URL + constants.API_KEY)
     
-    updater.bot.setWebhook('https://quiet-waters-54805.herokuapp.com/' + constants.API_KEY)
+    
     
     updater.idle()
 

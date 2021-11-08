@@ -2,7 +2,7 @@ from telegram.ext import *
 import constants, responses
 import os
 
-PORT = int(os.environ.get('PORT', 5000))
+PORT = int(os.environ.get('PORT', 80))
 
 def start_command(update, context):
     update.message.reply_text(f"Olá {update.message.from_user['first_name']} Seja bem vindo ao InvestBrBot, digite /help para ver os comandos disponíveis")

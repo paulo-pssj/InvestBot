@@ -5,7 +5,6 @@ import database
 import os
 
 db = database.DB()
-db.setup()
 
 PORT = int(os.environ.get('PORT', '8443'))
 
@@ -86,4 +85,5 @@ def main():
     updater.idle()
 
 if __name__ == '__main__':
+    db.setup()
     main()

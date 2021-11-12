@@ -1,5 +1,6 @@
 # InvestBrBot #
-Olá esse projeto tem como objetivo facilitar o acesso aos preços das ações na Bolsa de Valores Brasileira,<br/> por meio de um bot do telegram.
+Olá esse projeto tem como objetivo facilitar o acesso aos preços das ações na Bolsa de Valores Brasileira,<br/> por meio de um bot do telegram.<br/>
+Este Bot está hospedado no heroku ligado 24hrs, para ativar o Bot basta mandar uma mensagem.
 
 # Comandos #
 
@@ -15,3 +16,4 @@ Olá esse projeto tem como objetivo facilitar o acesso aos preços das ações n
 - python-telegram-bot 13.7
 - investpy 1.0.7
 - sqlite3
+- Heroku

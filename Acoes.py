@@ -23,12 +23,14 @@ def info_acao(acao):
 def cotacao_lista(user_id):
     lista = db.busca_acoes(user_id)
     lista = lista.upper().replace(" ", "").split(",")
+    while '' in lista:
+        lista.remove('')
     try:
         msg = []
         for acao in lista:
             dados = investpy.stocks.get_stock_recent_data(acao, "brazil", order="descending")
             msg.append('{} - {}'.format(acao, dados.iloc[0]["Close"]))
-            time.sleep(0.4)
+            time.sleep(0.2)
         return msg
     except RuntimeError:
         return None

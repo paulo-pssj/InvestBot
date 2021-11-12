@@ -1,9 +1,6 @@
 import investpy
-import telegram
 from database import DB
 import time
-
-user_id = telegram.update.Message.from_user
 
 db = DB()
 

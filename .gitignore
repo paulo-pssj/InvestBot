@@ -134,3 +134,6 @@ dmypy.json
 env-dev/
 
 __pycache__
+/venv
+constants.py
+database.db

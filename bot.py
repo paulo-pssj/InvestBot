@@ -74,12 +74,12 @@ def main():
     dp.add_handler(MessageHandler(Filters.text, handle_message))
     dp.add_error_handler(error)
 
-    #updater.start_webhook(listen="0.0.0.0",
-    #                    port=PORT,
-    #                    url_path=constants.API_KEY,
-    #                    webhook_url= constants.HEROKU_URL + constants.API_KEY)
+    updater.start_webhook(listen="0.0.0.0",
+                        port=PORT,
+                        url_path=constants.API_KEY,
+                        webhook_url= constants.HEROKU_URL + constants.API_KEY)
     
-    updater.start_polling()
+    #updater.start_polling()
     
     
     updater.idle()

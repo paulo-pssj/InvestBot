@@ -28,7 +28,7 @@ def cotacao_lista(user_id):
         for acao in lista:
             dados = investpy.stocks.get_stock_recent_data(acao, "brazil", order="descending")
             msg.append('{} - {}'.format(acao, dados.iloc[0]["Close"]))
-            time.sleep(1)
+            time.sleep(0.4)
         return msg
     except RuntimeError:
         return None

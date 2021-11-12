@@ -15,7 +15,7 @@ class DB:
                      lista_acoes TEXT
                  )
                  """
-        self.conn.execute(sql)
+        self.cur.execute(sql)
         self.conn.commit()
     
     # adiciona um novo usuário (id_telegram, nome, lista_acoes NULL)
@@ -24,7 +24,7 @@ class DB:
             sql = """
                     INSERT INTO users (id, name) VALUES ('{}', '{}')
                 """.format(id, name) 
-            self.conn.execute(sql)
+            self.cur.execute(sql)
             self.conn.commit()
     
     # Atualiza a lista de ações do usuário
@@ -32,7 +32,7 @@ class DB:
         sql = """
               UPDATE users SET lista_acoes = '{}' WHERE id = '{}'
               """.format(lista, id)      
-        self.conn.execute(sql)
+        self.cur.execute(sql)
         self.conn.commit()
     
     # deleta todas informações do usuário         
@@ -40,7 +40,7 @@ class DB:
         sql = """
               DELETE FROM users WHERE id = '{}'
               """.format(id)
-        self.conn.execute(sql)
+        self.cur.execute(sql)
         self.conn.commit()
     
     # Busca lista de ações pelo id do usuário

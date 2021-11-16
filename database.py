@@ -1,9 +1,10 @@
-import sqlite3
+import psycopg2
+import constants
 
 class DB:
-    def __init__(self, dbname="database.db"):
-        self.dbname = dbname
-        self.conn = sqlite3.connect(dbname, check_same_thread=False)
+    def __init__(self, db=constants.DATABASE_URL):
+        self.dbname = db
+        self.conn = psycopg2.connect(self.dbname)
         self.cur = self.conn.cursor()
         
     def setup(self):

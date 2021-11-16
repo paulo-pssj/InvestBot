@@ -15,5 +15,5 @@ Este Bot está hospedado no heroku ligado 24hrs, para ativar o Bot basta mandar 
 - Python 3.9
 - python-telegram-bot 13.7
 - investpy 1.0.7
-- sqlite3
+- postgresql
 - Heroku

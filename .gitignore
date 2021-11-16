@@ -135,4 +135,5 @@ env-dev/
 
 __pycache__
 /venv/
+/constants.py
 constants.py

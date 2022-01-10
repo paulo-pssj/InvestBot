@@ -1,8 +1,3 @@
-from database import DB
-
-db = DB()
-
-
 def sample_responses(input_text, user_id):
     user_message = str(input_text).lower().strip()
 
